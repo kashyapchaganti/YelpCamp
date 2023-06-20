@@ -8,6 +8,7 @@ const ejsMate = require('ejs-mate');
 const catchAsync = require('./utils/catchAsync');
 const ExpressError= require('./utils/ExpressError');
 const joi= require('joi');
+const Review =require('./models/reviews');
 mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -80,6 +81,14 @@ app.delete('/campgrounds/:id', catchAsync(async(req,res)=>{
     const {id}= req.params;
     const campground= await Campground.findByIdAndDelete(id);
     res.redirect('/campgrounds');
+}))
+app.post('/campgrounds/:id/reviews', catchAsync(async (req,res)=>{
+    const campground = await Campground.findById(req.params.id);
+    const review = new Review(req.body.review);
+    campground.reviews.push(review);
+    await review.save();
+    await campground.save();
+    res.redirect(`/campgrounds/${campground._id}`);
 }))
 app.all('*',async(req,res,next)=>{
     const err = new ExpressError('Something wrong', 404);
