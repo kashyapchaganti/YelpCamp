@@ -11,8 +11,9 @@ const passport = require('passport')
 const LocalStrategy = require('passport-local');
 const User = require('./models/user')
 
-const campgrounds = require('./routes/campground')
-const reviews = require('./routes/reviews')
+const userRoutes = require('./routes/users');
+const campgroundRoutes = require('./routes/campgrounds');
+const reviewRoutes = require('./routes/reviews');
 
 mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp', {
   useNewUrlParser: true,
@@ -56,14 +57,16 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use((req,res,next)=>{
+    res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
     next();
 })
 
 
-app.use('/campgrounds',campgrounds);
-app.use('/campgrounds/:id/reviews',reviews);
+app.use('/', userRoutes);
+app.use('/campgrounds', campgroundRoutes)
+app.use('/campgrounds/:id/reviews', reviewRoutes)
 
 
 
@@ -86,4 +89,3 @@ app.use((err,req,res,next)=>{
 app.listen(3000,()=> {
     console.log('Serving on port 3000');
 })
-
