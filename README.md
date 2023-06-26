@@ -7,7 +7,7 @@
 - This project is being created created using Node.js, Express, MongoDB, and Bootstrap. Passport.js is used to handle authentication.
 
 
-## Tech Stack
+## 🔨 Tech Stack
 
 **Client:** HTML, CSS, Javascript, Bootstrap
 
