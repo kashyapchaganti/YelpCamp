@@ -88,3 +88,22 @@ $ nodemon app.js
 
 - Overhaul the UI to create a more interactive experience. Three.js 👀👀
 
+# Home Page
+
+<img width="1102" alt="Screenshot 2023-07-03 at 5 12 12 PM" src="https://github.com/kashyapchaganti/YelpCamp/assets/66533610/cc5bc910-1487-4df0-bc6a-38a654a8d373">
+
+# All Campgrounds 
+
+<img width="729" alt="Screenshot 2023-07-03 at 5 24 08 PM" src="https://github.com/kashyapchaganti/YelpCamp/assets/66533610/2feff216-94d9-4706-9e39-4da3c289a4f8">
+
+# Individual Campground Show Page 
+
+<img width="749" alt="Screenshot 2023-07-03 at 5 24 20 PM" src="https://github.com/kashyapchaganti/YelpCamp/assets/66533610/73d34a0a-599f-4ee5-a3e8-3deb3e879572">
+
+# Login and Register Page
+<img width="990" alt="Screenshot 2023-07-03 at 5 23 38 PM" src="https://github.com/kashyapchaganti/YelpCamp/assets/66533610/4a34be73-452e-4c76-ae87-b90dbfdfe747">
+
+
+
+
+
