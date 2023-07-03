@@ -1,5 +1,5 @@
 
-# 🔭 Yelp Camp
+# 🔭 Welcome to Yelp Camp
 
 
 - YelpCamp is a full-stack website project where users can create and review campgrounds. In order to review or create a campground, you must have an account. This project is a part of Colt Steele's web dev bootcamp course on udemy.
@@ -16,6 +16,7 @@
 **Database:** MongoDB
 
 **Tools:** Express-Session, Passport.js, Cloudinary, Mongoose, Mapbox, EJS, Heroku
+
 
 
 ## 💡 Lessons Learned
